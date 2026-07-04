@@ -3,100 +3,60 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>泰里安®｜临床医生速览彩页</title>
-<meta name="description" content="泰里安®（氢溴酸替格列汀片）临床医生速览彩页：产品定位、用法剂量、核心证据、特殊人群与安全性提醒。仅供医学专业人士参考。" />
+<title>泰里安®｜临床医生彩页</title>
+<meta name="description" content="泰里安®（氢溴酸替格列汀片）临床医生彩页：一句话定位、用法剂量、核心证据、适用场景与安全边界。仅供医学专业人士参考。" />
 <style>
-:root{
-  --ink:#26384d;--text:#5f7083;--muted:#93a1b2;--blue:#6f9fe8;--cyan:#87d4de;--pink:#f4a5b5;--bg:#f8fbff;--card:#fff;--line:#e8edf5;--soft:#f4f8ff;--warm:#fff7f8;--shadow:0 18px 48px rgba(37,84,118,.11);--shadow2:0 28px 80px rgba(37,84,118,.16);--max:1180px;--font:"Alibaba PuHuiTi 3.0","PingFang SC","Microsoft YaHei",Arial,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font);color:var(--ink);background:linear-gradient(180deg,#fff 0,#fbfdff 45%,#f7fbff 100%);line-height:1.72}a{text-decoration:none;color:inherit}p{color:var(--text)}
-.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-.navin{max-width:var(--max);height:72px;margin:auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;font-weight:900}.logo{width:42px;height:42px;border-radius:15px;background:linear-gradient(135deg,var(--pink),var(--blue));display:grid;place-items:center;color:#fff;box-shadow:0 14px 34px rgba(123,159,232,.25)}.brand small{display:block;color:var(--muted);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}.menu{display:flex;gap:8px;flex-wrap:wrap}.menu a{padding:9px 14px;border-radius:999px;color:var(--muted);font-size:14px;font-weight:800}.menu a:hover{background:var(--soft);color:var(--blue)}
-.wrap{max-width:var(--max);margin:auto;padding:66px 24px}.hero{position:relative;overflow:hidden;background:radial-gradient(680px 360px at 88% 4%,rgba(244,165,181,.20),transparent 62%),radial-gradient(620px 340px at 5% 8%,rgba(111,159,232,.18),transparent 62%),linear-gradient(135deg,#fff,#f8fbff 62%,#fff7f9);border-bottom:1px solid var(--line)}.hero:after{content:"";position:absolute;right:7%;bottom:13%;width:128px;height:92px;background-image:radial-gradient(rgba(135,212,222,.7) 1.6px,transparent 1.6px);background-size:14px 14px;opacity:.55}.hero-grid{position:relative;z-index:1;max-width:var(--max);margin:auto;padding:76px 24px 58px;display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:center}.badgebar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.badge{padding:7px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 18px rgba(37,84,118,.05);font-size:13px;color:var(--blue);font-weight:900}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.14;letter-spacing:-.03em;margin-bottom:18px}.hero h1 span{display:block;background:linear-gradient(90deg,var(--pink),var(--blue) 54%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;max-width:720px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-weight:900;border:1px solid var(--line);background:#fff;color:var(--blue);transition:.22s}.btn.primary{background:linear-gradient(135deg,var(--pink),var(--blue));color:#fff;border-color:transparent;box-shadow:0 16px 34px rgba(111,159,232,.24)}.btn:hover{transform:translateY(-3px)}.visual{position:relative;min-height:420px}.panel{position:absolute;inset:0;border-radius:34px;background:rgba(255,255,255,.74);border:1px solid var(--line);box-shadow:var(--shadow2)}.pack{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-3deg);width:min(330px,84%);height:390px;border-radius:30px;background:linear-gradient(150deg,#fff 0 36%,#fff1f4 36% 55%,#eef5ff 55%);border:1px solid rgba(111,159,232,.16);box-shadow:0 30px 70px rgba(37,84,118,.17);padding:34px}.pack:before{content:"";position:absolute;inset:16px;border:1px solid rgba(111,159,232,.14);border-radius:20px}.pack small,.pack h2,.pack p,.dose{position:relative}.pack small{color:var(--cyan);font-size:12px;letter-spacing:.16em;font-weight:900;text-transform:uppercase}.pack h2{margin-top:38px;font-size:58px;line-height:1}.pack p{margin-top:12px;font-size:14px}.dose{position:absolute;right:26px;bottom:26px;width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--blue));color:#fff;font-size:34px;font-weight:900}.float{position:absolute;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow);width:210px}.f1{left:4px;bottom:34px}.f2{right:0;top:54px}.f3{right:24px;bottom:14px}.float b{display:block;color:var(--blue);font-size:25px}.float span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-.section-head{max-width:760px;margin:0 auto 34px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--soft);color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:13px}.section-head h2{font-size:clamp(29px,4vw,42px);line-height:1.22;letter-spacing:-.02em}.section-head p{margin-top:10px;color:var(--muted);font-size:16px}.section-head:after{content:"";display:block;width:82px;height:7px;margin:18px auto 0;border-radius:99px;background:linear-gradient(90deg,transparent,var(--pink),var(--blue),transparent);opacity:.65}
-.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.quick-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}.quick-card:after,.scene:after,.evi:after,.safe-card:after{content:"";position:absolute;right:-30px;top:-30px;width:95px;height:95px;border-radius:50%;background:radial-gradient(circle,rgba(244,165,181,.15),rgba(111,159,232,0) 70%)}.num{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:14px;background:var(--soft);color:var(--blue);font-weight:900;margin-bottom:14px}.quick-card h3{font-size:18px;margin-bottom:8px}.quick-card p{font-size:14px}.strip{margin-top:18px;border-radius:28px;padding:24px;background:linear-gradient(135deg,#f1f8ff,#fff8fb);border:1px solid var(--line);box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.strip div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}.strip b{display:block;color:var(--blue);font-size:24px;line-height:1}.strip span{display:block;color:var(--muted);font-size:13px;margin-top:6px}
-.scene-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.scene{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow);display:grid;grid-template-columns:64px 1fr;gap:18px}.dot{width:60px;height:60px;border-radius:18px;background:linear-gradient(135deg,#eef5ff,#fff7fa);display:grid;place-items:center;color:var(--blue);font-weight:900}.scene h3{font-size:21px;margin-bottom:8px}.scene ul{margin-top:10px;padding-left:18px;color:var(--text);font-size:14px}.muted-box{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}.muted-box b{color:var(--ink)}
-.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.evi{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}.evi small{display:inline-flex;padding:6px 10px;border-radius:999px;background:var(--soft);color:var(--blue);font-weight:900;margin-bottom:12px}.evi h3{font-size:21px;margin-bottom:8px}.big{font-size:42px;line-height:1;color:var(--blue);font-weight:900;margin:12px 0}.evi p{font-size:14px}.tablewrap{margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}table{width:100%;border-collapse:collapse;font-size:14px}th{background:linear-gradient(135deg,#f6acba,#86b5f4);color:#fff;text-align:left;padding:14px;font-size:12px;letter-spacing:.06em}td{padding:14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--text)}tr:last-child td{border-bottom:none}.hl{color:var(--blue);font-weight:900}
-.safe{display:grid;grid-template-columns:.92fr 1.08fr;gap:22px}.safe-main{border-radius:30px;padding:32px;background:linear-gradient(135deg,#f0fbfc,#f6f9ff);border:1px solid var(--line);box-shadow:var(--shadow)}.safe-main h3{font-size:30px;line-height:1.28}.safe-main .big{font-size:66px;color:#75bfc5}.safe-list{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.safe-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow)}.safe-card b{display:block;font-size:18px;margin-bottom:6px}.safe-card p{font-size:14px}.alert{margin-top:18px;border:1px solid #f0d7aa;background:#fff8ee;color:#76572b;border-radius:18px;padding:16px;font-size:14px}
-.message{border-radius:32px;background:linear-gradient(135deg,var(--pink),var(--blue) 58%,var(--cyan));box-shadow:var(--shadow2);padding:34px;color:#fff;display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:center}.message p{color:rgba(255,255,255,.94)}.message h2{font-size:34px;line-height:1.24}.quote{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);border-radius:24px;padding:24px;font-size:20px;font-weight:900;line-height:1.6}.refs{background:#f3fafc;border-top:1px solid var(--line)}.refs ol{columns:2;column-gap:46px;padding-left:22px}.refs li{break-inside:avoid;margin-bottom:10px;color:var(--text);font-size:14px}.compliance{margin-top:24px;padding:18px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);color:var(--text);font-size:13px}.footer{border-top:1px solid var(--line);background:#fff}.footerin{max-width:var(--max);margin:auto;padding:18px 24px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:13px}
-@media(max-width:1040px){.hero-grid,.safe,.message{grid-template-columns:1fr}.quick-grid,.strip,.evidence-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){.navin{height:auto;align-items:flex-start;flex-direction:column;padding:14px 18px}.wrap,.hero-grid{padding-left:18px;padding-right:18px}.quick-grid,.strip,.scene-grid,.evidence-grid,.safe-list{grid-template-columns:1fr}.visual{min-height:380px}.float{display:none}.pack{height:350px}.tablewrap{overflow:auto}table{min-width:760px}.refs ol{columns:1}.footerin{flex-direction:column}.message{padding:26px}.quote{font-size:17px}}
-</style>
+:root{--ink:#24364b;--text:#5c6d7f;--muted:#8d9bad;--blue:#6d9fea;--cyan:#86d3dd;--pink:#f3a2b2;--line:#e7edf5;--soft:#f5f8ff;--card:#fff;--shadow:0 18px 46px rgba(38,78,118,.10);--max:1120px;--font:"Alibaba PuHuiTi 3.0","PingFang SC","Microsoft YaHei",Arial,sans-serif}*{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font);color:var(--ink);background:linear-gradient(180deg,#fff,#f8fbff 72%,#fff7fa);line-height:1.65}p{color:var(--text)}.page{max-width:var(--max);margin:auto;padding:34px 24px 42px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:16px;background:linear-gradient(135deg,var(--pink),var(--blue));display:grid;place-items:center;color:#fff;font-weight:900;box-shadow:0 14px 30px rgba(109,159,234,.24)}.brand b{display:block;font-size:19px}.brand span{display:block;color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.notice{padding:8px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--muted);font-size:13px;font-weight:800}.hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:34px;background:radial-gradient(520px 280px at 86% 12%,rgba(243,162,178,.22),transparent 60%),radial-gradient(480px 260px at 8% 0%,rgba(109,159,234,.18),transparent 62%),linear-gradient(135deg,#fff,#f8fbff);box-shadow:var(--shadow);padding:42px}.hero:after{content:"";position:absolute;right:44px;bottom:38px;width:108px;height:78px;background-image:radial-gradient(rgba(134,211,221,.65) 1.6px,transparent 1.6px);background-size:14px 14px;opacity:.58}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:34px;align-items:center}.tagrow{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}.tag{display:inline-flex;padding:7px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--blue);font-size:13px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.12;letter-spacing:-.03em;margin-bottom:18px}.hero h1 span{display:block;background:linear-gradient(90deg,var(--pink),var(--blue) 54%,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:18px;max-width:670px}.oneword{margin-top:22px;padding:18px 20px;border-radius:22px;background:#fff;border:1px solid var(--line);font-size:20px;font-weight:900;color:var(--ink)}.pack{width:min(320px,100%);height:360px;margin-left:auto;border-radius:30px;background:linear-gradient(150deg,#fff 0 36%,#fff0f3 36% 55%,#eef5ff 55%);border:1px solid rgba(109,159,234,.18);box-shadow:0 28px 62px rgba(38,78,118,.14);padding:34px;position:relative;transform:rotate(-2deg)}.pack:before{content:"";position:absolute;inset:16px;border:1px solid rgba(109,159,234,.14);border-radius:20px}.pack small,.pack h2,.pack p,.dose{position:relative}.pack small{color:var(--cyan);font-size:12px;letter-spacing:.16em;font-weight:900}.pack h2{font-size:56px;line-height:1;margin-top:42px}.pack p{font-size:14px;margin-top:12px}.dose{position:absolute;right:24px;bottom:24px;width:86px;height:86px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),var(--blue));color:#fff;font-size:34px;font-weight:900}.main{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}.card{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow)}.card h2{font-size:25px;line-height:1.25;margin-bottom:14px;display:flex;align-items:center;gap:10px}.num{width:34px;height:34px;border-radius:12px;background:var(--soft);display:grid;place-items:center;color:var(--blue);font-size:15px;font-weight:900;flex:0 0 auto}.list{display:grid;gap:12px}.item{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:13px;border-radius:18px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid var(--line)}.item b{color:var(--ink)}.item span{color:var(--text);font-size:14px}.evidence{margin-top:24px;border:1px solid var(--line);border-radius:30px;background:#fff;box-shadow:var(--shadow);padding:28px}.evidence h2{font-size:27px;margin-bottom:16px}.evgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.ev{border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg,#fff,#f8fbff);padding:18px}.ev small{display:block;color:var(--muted);font-weight:900;margin-bottom:8px}.ev b{display:block;font-size:26px;color:var(--blue);line-height:1.05;margin-bottom:8px}.ev p{font-size:13px}.bottom{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;margin-top:24px}.safe{background:linear-gradient(135deg,#f0fbfc,#f7f9ff);border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow)}.safe h2,.refs h2{font-size:24px;margin-bottom:12px}.safe ul{padding-left:20px;color:var(--text);font-size:14px}.safe li{margin:8px 0}.refs{background:#fff;border:1px solid var(--line);border-radius:28px;padding:26px;box-shadow:var(--shadow)}.refs p{font-size:13px;margin-bottom:8px}.refs ol{padding-left:20px;color:var(--text);font-size:12.5px}.refs li{margin:5px 0}.foot{margin-top:22px;padding:16px 18px;border-radius:20px;background:#fff;border:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}@media(max-width:920px){.hero-grid,.main,.bottom{grid-template-columns:1fr}.pack{margin:20px auto 0}.evgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.page{padding:22px 16px 34px}.top{align-items:flex-start;flex-direction:column}.hero{padding:28px 22px}.hero:after{display:none}.item{grid-template-columns:1fr}.evgrid{grid-template-columns:1fr}.pack{height:320px}.pack h2{font-size:48px}.notice{border-radius:14px}.oneword{font-size:17px}}</style>
 </head>
 <body>
-<nav class="nav">
-  <div class="navin">
-    <div class="brand"><div class="logo">T</div><div>泰里安® 临床速览彩页<small>for healthcare professionals</small></div></div>
-    <div class="menu"><a href="#core">医生先看</a><a href="#scenario">临床场景</a><a href="#evidence">核心证据</a><a href="#safety">安全性</a><a href="#refs">文献</a></div>
-  </div>
-</nav>
-<header class="hero">
-  <div class="hero-grid">
-    <div>
-      <div class="badgebar"><span class="badge">DPP-4 抑制剂</span><span class="badge">成人 2 型糖尿病</span><span class="badge">彩页式速览</span></div>
-      <h1>给临床医生看的<br><span>泰里安®核心信息</span></h1>
-      <p class="lead">把原来的多页面跳转，调整为一张清晰的医生速览页：先讲“适合谁、怎么用、有什么证据、注意什么”，再补充文献来源，减少来回点击。</p>
-      <div class="actions"><a class="btn primary" href="#core">先看4个关键信息 →</a><a class="btn" href="#evidence">查看证据要点</a></div>
+<div class="page">
+  <header class="top">
+    <div class="brand"><div class="logo">T</div><div><b>泰里安® 临床医生彩页</b><span>Tenelia / Teneligliptin</span></div></div>
+    <div class="notice">仅供医学专业人士参考</div>
+  </header>
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="tagrow"><span class="tag">DPP-4 抑制剂</span><span class="tag">成人 2 型糖尿病</span><span class="tag">每日一次</span></div>
+        <h1>医生拿到彩页，<span>先看结论就够了</span></h1>
+        <p class="lead">本页不做复杂导航，不做资料库跳转，只保留临床沟通最常用的五件事：适合谁、怎么用、证据是什么、哪些人群可讨论、注意什么。</p>
+        <div class="oneword">一句话：泰里安®用于成人 T2DM 血糖控制，可围绕单药起始、二甲双胍加用、老年与肾功能受损场景进行学术沟通。</div>
+      </div>
+      <div class="pack"><small>TENELIA</small><h2>泰里安</h2><p>氢溴酸替格列汀片<br>Teneligliptin Hydrobromide Tablets</p><div class="dose">20</div></div>
     </div>
-    <div class="visual" aria-hidden="true">
-      <div class="panel"></div>
-      <div class="pack"><small>TENELIA / Teneligliptin</small><h2>泰里安</h2><p>氢溴酸替格列汀片<br>Teneligliptin Hydrobromide Tablets</p><div class="dose">20</div></div>
-      <div class="float f1"><b>QD</b><span>每日一次口服方案</span></div>
-      <div class="float f2"><b>-0.80%</b><span>中国单药 III 期 HbA1c 组间差</span></div>
-      <div class="float f3"><b>RWE</b><span>RUBY 长期安全性资料</span></div>
+  </section>
+  <section class="main">
+    <article class="card">
+      <h2><span class="num">01</span>临床医生最关心</h2>
+      <div class="list">
+        <div class="item"><b>适合谁</b><span>成人 2 型糖尿病患者改善血糖控制。</span></div>
+        <div class="item"><b>怎么用</b><span>20mg 每日 1 次；控制不佳时可增至 40mg。</span></div>
+        <div class="item"><b>怎么讲</b><span>单药、二甲双胍加用、老年、肾功能受损四个场景。</span></div>
+      </div>
+    </article>
+    <article class="card">
+      <h2><span class="num">02</span>招商同事拿去讲</h2>
+      <div class="list">
+        <div class="item"><b>开场</b><span>“这是一个每日一次的 DPP-4 抑制剂。”</span></div>
+        <div class="item"><b>重点</b><span>“中国 III 期、TEDDY、RUBY 提供疗效与安全性资料。”</span></div>
+        <div class="item"><b>边界</b><span>“具体适应症、禁忌和剂量调整以最新版说明书为准。”</span></div>
+      </div>
+    </article>
+  </section>
+  <section class="evidence">
+    <h2>核心证据，不再让医生跳着找</h2>
+    <div class="evgrid">
+      <div class="ev"><small>中国 III 期｜单药</small><b>-0.80%</b><p>24 周 HbA1c 组间差；FPG 组间差 -20.5 mg/dL。</p></div>
+      <div class="ev"><small>中国 III 期｜加用</small><b>41.7%</b><p>二甲双胍加用研究中 HbA1c 达标率。</p></div>
+      <div class="ev"><small>TEDDY｜老年 CGM</small><b>+3.2h</b><p>TIR 增加，补充全天血糖质量视角。</p></div>
+      <div class="ev"><small>RUBY｜真实世界</small><b>3年</b><p>10,696 例安全性分析人群，长期观察资料。</p></div>
     </div>
-  </div>
-</header>
-<main>
-<section class="wrap" id="core">
-  <div class="section-head"><span class="eyebrow">Clinical first</span><h2>医生先看这 4 点</h2><p>从临床医生阅读彩页的视角出发，先给结论，再给依据。</p></div>
-  <div class="quick-grid">
-    <article class="quick-card"><span class="num">01</span><h3>适合哪类患者</h3><p>用于成人 2 型糖尿病患者改善血糖控制；可围绕单药起始和二甲双胍控制不佳后的加用场景沟通。</p></article>
-    <article class="quick-card"><span class="num">02</span><h3>怎么用更直观</h3><p>20mg 每日 1 次起始；充分观察后血糖控制不佳时，可增至 40mg。</p></article>
-    <article class="quick-card"><span class="num">03</span><h3>医生关心什么</h3><p>重点回答降糖效果、低血糖风险、老年患者、肾功能受损人群和长期使用安全性。</p></article>
-    <article class="quick-card"><span class="num">04</span><h3>证据怎么支撑</h3><p>用中国 III 期、TEDDY、RUBY 和系统评价串成证据链，避免堆叠太多跳转。</p></article>
-  </div>
-  <div class="strip">
-    <div><b>20mg</b><span>推荐起始剂量</span></div><div><b>40mg</b><span>控制不佳时可增量</span></div><div><b>24h</b><span>约半衰期信息</span></div><div><b>10,696</b><span>RUBY 安全性分析人群</span></div>
-  </div>
-</section>
-<section class="wrap" id="scenario">
-  <div class="section-head"><span class="eyebrow">Clinical scenarios</span><h2>按临床场景来讲，而不是让医生自己找</h2><p>每个场景只保留“患者类型 + 沟通重点 + 可引用证据”。</p></div>
-  <div class="scene-grid">
-    <article class="scene"><div class="dot">单</div><div><h3>单药起始治疗</h3><p>饮食运动控制不佳时，聚焦 HbA1c 与 FPG 改善。</p><ul><li>中国 III 期单药研究</li><li>强调每日一次用药便利性</li></ul></div></article>
-    <article class="scene"><div class="dot">联</div><div><h3>二甲双胍加用</h3><p>二甲双胍单药控制不佳时，围绕达标率和安全性沟通。</p><ul><li>HbA1c 达标率 41.7% vs 16.1%</li><li>研究中未发生严重低血糖</li></ul></div></article>
-    <article class="scene"><div class="dot">老</div><div><h3>老年 T2DM 管理</h3><p>老年患者可从简化治疗、低血糖风险和全天血糖质量切入。</p><ul><li>TEDDY 研究补充 TIR 视角</li><li>兼顾依从性与安全性表达</li></ul></div></article>
-    <article class="scene"><div class="dot">肾</div><div><h3>肾功能受损人群</h3><p>以指南、药代综述和 RUBY 分层资料作为讨论基础。</p><ul><li>G1-G5 与透析分层资料</li><li>强调个体化评估与监测</li></ul></div></article>
-  </div>
-  <div class="muted-box"><b>页面调整逻辑：</b>原页面偏“医学信息中心”，适合内部查资料；现在改成“医生速览彩页”，让招商同事拿给临床医生看时，一屏就能讲清楚重点。</div>
-</section>
-<section class="wrap" id="evidence">
-  <div class="section-head"><span class="eyebrow">Evidence summary</span><h2>核心证据保留，但表达更简单</h2><p>删除复杂星图和搜索表，改成可直接阅读的证据卡片。</p></div>
-  <div class="evidence-grid">
-    <article class="evi"><small>中国 III 期｜单药</small><h3>HbA1c 与 FPG 改善</h3><div class="big">-0.80%</div><p>Ji LN 等单药研究显示，24 周 HbA1c 组间差 -0.80%，FPG 组间差 -20.5 mg/dL。</p></article>
-    <article class="evi"><small>中国 III 期｜加用</small><h3>二甲双胍控制不佳后的选择</h3><div class="big">41.7%</div><p>二甲双胍加用研究中，HbA1c 达标率 41.7% vs 16.1%。</p></article>
-    <article class="evi"><small>TEDDY｜CGM</small><h3>老年患者全天血糖质量</h3><div class="big">+3.2h</div><p>TIR 70-180 安慰剂校正变化约 +13.3%，约等于每日目标范围内时间增加 3.2 小时。</p></article>
-    <article class="evi"><small>RUBY｜真实世界</small><h3>长期安全性观察</h3><div class="big">3年</div><p>RUBY 提供超过 1 万例安全性分析人群的长期真实世界资料。</p></article>
-    <article class="evi"><small>系统评价</small><h3>整体证据背书</h3><div class="big">HbA1c</div><p>多项系统评价支持 HbA1c 与 FPG 改善，安全性整体可接受。</p></article>
-    <article class="evi"><small>指南场景</small><h3>特殊人群沟通</h3><div class="big">ADA / NICE</div><p>可用于二甲双胍禁忌或不耐受、老年和肾损伤患者等场景讨论。</p></article>
-  </div>
-  <div class="tablewrap"><table><thead><tr><th>医生问题</th><th>直接回答</th><th>支撑资料</th></tr></thead><tbody><tr><td>单药治疗有没有中国数据？</td><td><span class="hl">有。</span>24 周 HbA1c 与 FPG 均有改善。</td><td>Ji LN 2021 单药研究</td></tr><tr><td>二甲双胍控制不佳怎么办？</td><td>可围绕加用后的 HbA1c 达标率沟通。</td><td>Ji LN 2021 二甲双胍加用研究</td></tr><tr><td>老年患者怎么讲？</td><td>除 HbA1c 外，可补充 TIR 和低血糖风险视角。</td><td>TEDDY 研究、中国老年糖尿病诊疗指南</td></tr><tr><td>长期安全性如何表达？</td><td>RUBY 提供 3 年真实世界观察资料。</td><td>RUBY 研究</td></tr></tbody></table></div>
-</section>
-<section class="wrap" id="safety">
-  <div class="section-head"><span class="eyebrow">Safety & boundary</span><h2>安全性与用药边界</h2><p>给医生看的内容既要有价值，也要保留合规边界。</p></div>
-  <div class="safe">
-    <article class="safe-main"><h3>长期安全性资料可作为沟通支撑</h3><div class="big">1.09%</div><p>RUBY 中严重 ADRs 1.09%，全部 ADRs 3.85%，可用于支持长期安全性沟通。</p><div class="alert">合并使用胰岛素或磺脲类药物时，应关注低血糖风险并加强监测。</div></article>
-    <div class="safe-list"><article class="safe-card"><b>低血糖风险</b><p>二甲双胍加用研究中未发生严重低血糖。</p></article><article class="safe-card"><b>肾功能受损人群</b><p>结合 RUBY 分层资料与指南进行审慎沟通。</p></article><article class="safe-card"><b>皮肤相关信号</b><p>出现相关表现需及时评估。</p></article><article class="safe-card"><b>说明书优先</b><p>适应症、禁忌、不良反应、特殊人群与剂量调整均以最新版说明书为准。</p></article></div>
-  </div>
-</section>
-<section class="wrap">
-  <div class="message"><div><span class="eyebrow" style="background:rgba(255,255,255,.20);color:#fff">One sentence</span><h2>彩页沟通一句话</h2><p>把产品信息落到医生能快速判断的临床问题上。</p></div><div class="quote">泰里安®是面向成人 2 型糖尿病长期血糖管理的每日一次 DPP-4 抑制剂，可用中国 III 期、TEDDY、RUBY 与系统评价，支持单药、二甲双胍加用、老年及特殊人群场景沟通。</div></div>
-</section>
-<section class="wrap refs" id="refs">
-  <div class="section-head"><span class="eyebrow">References</span><h2>文献来源</h2><p>保留来源，但不再把正文做成复杂跳转。</p></div>
-  <ol><li>泰里安20260416广东代理商培训，内部培训材料。</li><li>Ceriello A, et al. The Unique Pharmacological and Pharmacokinetic Profile of Teneligliptin. Drugs. 2019.</li><li>Ji LN, et al. Teneligliptin monotherapy in Chinese patients with type 2 diabetes mellitus. J Diabetes Investig. 2021.</li><li>Ji LN, et al. Teneligliptin added to metformin in Chinese patients with T2DM. Endocrinol Diabetes Metab. 2021.</li><li>Bae JC, et al. Effects of Teneligliptin on HbA1c, TIR and Glycemic Variability in Elderly Patients. Diabetes Metab J. 2022.</li><li>Kadowaki T, et al. Long-Term, Real-World Safety and Efficacy of Teneligliptin: RUBY. Adv Ther. 2020.</li><li>Kim HJ, et al. Switching to Teneligliptin in Patients Inadequately Controlled with DPP-4 Inhibitors. Diabetes Ther. 2021.</li><li>中国老年糖尿病诊疗指南（2024版）. 中华糖尿病杂志. 2024.</li></ol>
-  <div class="compliance">合规提示：本页面仅用于医学专业人士的学术交流、内部培训和资料展示，不构成处方建议、诊断建议或患者用药指导。涉及适应症、禁忌、不良反应、特殊人群、剂量调整与联用方案时，请以经批准的最新版药品说明书及当地诊疗规范为准。</div>
-</section>
-</main>
-<footer class="footer"><div class="footerin"><span>仅供医学专业人士参考｜请以最新版说明书为准</span><span>页面结构：医生速览 · 场景沟通 · 证据支撑 · 安全边界</span></div></footer>
+  </section>
+  <section class="bottom">
+    <article class="safe"><h2>安全性与用药边界</h2><ul><li>RUBY：ADRs 3.85%，严重 ADRs 1.09%。</li><li>二甲双胍加用研究中未发生严重低血糖。</li><li>合并胰岛素或磺脲类药物时，应关注低血糖风险并加强监测。</li><li>特殊人群、禁忌、不良反应与剂量调整以最新版说明书为准。</li></ul></article>
+    <article class="refs"><h2>文献来源</h2><p>正文只保留常用证据，文献放底部，不干扰医生阅读。</p><ol><li>泰里安20260416广东代理商培训，内部培训材料。</li><li>Ceriello A, et al. Drugs. 2019.</li><li>Ji LN, et al. J Diabetes Investig. 2021.</li><li>Ji LN, et al. Endocrinol Diabetes Metab. 2021.</li><li>Bae JC, et al. Diabetes Metab J. 2022.</li><li>Kadowaki T, et al. Adv Ther. 2020.</li><li>中国老年糖尿病诊疗指南（2024版）.</li></ol></article>
+  </section>
+  <div class="foot">合规提示：本页面仅用于医学专业人士的学术交流、内部培训和资料展示，不构成处方建议、诊断建议或患者用药指导。</div>
+</div>
 </body>
 </html>
