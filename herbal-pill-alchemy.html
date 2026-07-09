@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>草本淬丸｜中药研磨工艺可视化</title>
+<meta name="description" content="中草药经研磨、淬炼、凝聚生成药丸的炫酷单页动画。适合学术推广、产品网页视觉入口或PPT嵌入。" />
+<style>
+:root{
+  --bg:#071714;
+  --bg2:#0d2a22;
+  --card:rgba(255,255,255,.08);
+  --line:rgba(221,255,238,.18);
+  --text:#f3fff9;
+  --muted:#aac7bb;
+  --jade:#54f0b4;
+  --green:#1bbf7a;
+  --deep:#0d6d50;
+  --gold:#f8d981;
+  --amber:#ff9f43;
+  --ember:#ff5e36;
+  --shadow:0 28px 90px rgba(0,0,0,.42);
+  --font:"Alibaba PuHuiTi 3.0","PingFang SC","Microsoft YaHei",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  font-family:var(--font);
+  color:var(--text);
+  background:
+    radial-gradient(900px 520px at 18% 10%,rgba(84,240,180,.18),transparent 60%),
+    radial-gradient(760px 500px at 86% 22%,rgba(248,217,129,.16),transparent 58%),
+    radial-gradient(900px 620px at 50% 100%,rgba(255,94,54,.10),transparent 62%),
+    linear-gradient(135deg,#06110f 0%,#09231d 48%,#071714 100%);
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;
+  pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.032) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(circle at 50% 28%,#000 0,transparent 76%);
+}
+.page{width:min(1240px,calc(100% - 36px));margin:auto;padding:28px 0 44px;position:relative}
+.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--jade),var(--gold));color:#062018;font-weight:1000;box-shadow:0 16px 40px rgba(84,240,180,.22)}
+.brand b{font-size:20px;display:block;letter-spacing:.02em}.brand span{display:block;color:var(--muted);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-top:2px}
+.badge{border:1px solid var(--line);background:rgba(255,255,255,.06);backdrop-filter:blur(16px);border-radius:999px;padding:10px 14px;color:#d9fff0;font-size:13px;font-weight:800;box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.hero{display:grid;grid-template-columns:.82fr 1.18fr;gap:26px;align-items:stretch}
+.copy,.stage-card,.steps,.note-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.055));box-shadow:var(--shadow);backdrop-filter:blur(18px)}
+.copy{border-radius:36px;padding:34px;position:relative;overflow:hidden}
+.copy:before{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(84,240,180,.22),transparent 67%)}
+.kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(84,240,180,.28);border-radius:999px;background:rgba(84,240,180,.08);color:#baffe6;font-weight:900;font-size:13px;margin-bottom:18px}.kicker i{width:9px;height:9px;border-radius:50%;background:var(--jade);box-shadow:0 0 22px var(--jade)}
+h1{font-size:clamp(42px,5.4vw,76px);line-height:1.04;letter-spacing:-.055em;margin-bottom:18px}h1 span{display:block;background:linear-gradient(90deg,#fff,var(--jade) 46%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:#cde4da;font-size:17px;line-height:1.8;max-width:560px}.lead strong{color:#fff;font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}.chip{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--line);font-size:13px;color:#d8fff0;font-weight:800}
+.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}.stat{border:1px solid var(--line);border-radius:22px;padding:16px;background:rgba(4,20,16,.42)}.stat b{display:block;color:var(--gold);font-size:24px;line-height:1}.stat span{display:block;color:var(--muted);font-size:12px;margin-top:7px}
+.action{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:0;cursor:pointer;border-radius:18px;padding:13px 16px;font-weight:1000;color:#062018;background:linear-gradient(135deg,var(--jade),var(--gold));box-shadow:0 18px 44px rgba(84,240,180,.22)}.ghost{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:18px;padding:12px 15px;color:#dffdf2;text-decoration:none;background:rgba(255,255,255,.055);font-weight:900}
+.stage-card{border-radius:38px;min-height:650px;padding:24px;position:relative;overflow:hidden}.stage-card:before{content:"";position:absolute;inset:22px;border-radius:30px;background:radial-gradient(circle at 20% 48%,rgba(84,240,180,.11),transparent 34%),radial-gradient(circle at 60% 48%,rgba(248,217,129,.09),transparent 36%),radial-gradient(circle at 86% 52%,rgba(255,94,54,.08),transparent 34%);border:1px solid rgba(255,255,255,.06)}
+.stage-title{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px}.stage-title h2{font-size:22px;letter-spacing:-.02em}.stage-title span{font-size:12px;color:var(--muted);font-weight:800}
+.alchemy{position:relative;z-index:2;height:560px;border-radius:30px;overflow:hidden;background:linear-gradient(180deg,rgba(4,20,16,.2),rgba(4,20,16,.62));border:1px solid rgba(255,255,255,.07)}
+.rune{position:absolute;inset:auto auto 28px 50%;transform:translateX(-50%);width:420px;height:420px;border-radius:50%;border:1px solid rgba(248,217,129,.22);background:repeating-conic-gradient(from 0deg,rgba(248,217,129,.10) 0 4deg,transparent 4deg 12deg);filter:blur(.1px);opacity:.45;animation:spin 28s linear infinite}.rune:after{content:"";position:absolute;inset:54px;border-radius:50%;border:1px dashed rgba(84,240,180,.28)}
+.flow{position:absolute;left:92px;right:92px;top:272px;height:2px;background:linear-gradient(90deg,transparent,var(--jade),var(--gold),var(--ember),transparent);box-shadow:0 0 22px rgba(84,240,180,.55);opacity:.65}.flow:before,.flow:after{content:"";position:absolute;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--jade);box-shadow:0 0 18px var(--jade);animation:pulse 2s ease-in-out infinite}.flow:before{left:12%}.flow:after{left:66%;animation-delay:1s;background:var(--gold);box-shadow:0 0 18px var(--gold)}
+.zone-label{position:absolute;top:22px;padding:8px 11px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#ddfff2;font-size:12px;font-weight:900}.z1{left:42px}.z2{left:calc(50% - 54px)}.z3{right:46px}
+.herbs{position:absolute;left:34px;top:116px;width:238px;height:250px}.herb{position:absolute;width:72px;height:72px;border-radius:26px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(84,240,180,.08));border:1px solid rgba(84,240,180,.25);box-shadow:0 18px 42px rgba(0,0,0,.28);animation:herbFly 6.4s ease-in-out infinite}.herb:before,.herb:after{content:"";position:absolute;border-radius:70% 12% 70% 12%;background:linear-gradient(135deg,var(--jade),var(--deep));box-shadow:0 0 18px rgba(84,240,180,.26)}.herb:before{width:28px;height:46px;left:18px;top:13px;transform:rotate(-28deg)}.herb:after{width:24px;height:40px;right:16px;bottom:12px;transform:rotate(42deg);background:linear-gradient(135deg,#c8f79b,var(--green))}.herb em{position:absolute;left:50%;bottom:-24px;transform:translateX(-50%);white-space:nowrap;color:#d7fff0;font-style:normal;font-size:12px;font-weight:900;letter-spacing:.06em}.h1{left:0;top:0;animation-delay:0s}.h2{right:0;top:18px;animation-delay:-1.2s}.h3{left:28px;bottom:26px;animation-delay:-2.1s}.h4{right:18px;bottom:0;animation-delay:-3.3s}.h2:before{background:linear-gradient(135deg,#ffe29a,#d58b37)}.h2:after{background:linear-gradient(135deg,#f46d5f,#b93128)}.h3:before{background:linear-gradient(135deg,#b4f7cf,#3db782)}.h3:after{background:linear-gradient(135deg,#ffffff,#d5c092)}.h4:before{background:linear-gradient(135deg,#d4f5a6,#82b642)}.h4:after{background:linear-gradient(135deg,#ffd2d2,#de5656)}
+.mortar{position:absolute;left:50%;top:290px;transform:translate(-50%,-50%);width:260px;height:250px}.bowl{position:absolute;left:36px;right:36px;bottom:24px;height:112px;border-radius:18px 18px 82px 82px;background:linear-gradient(180deg,#dfe8d9,#6f796b);box-shadow:inset 0 18px 32px rgba(255,255,255,.25),inset 0 -18px 40px rgba(0,0,0,.35),0 28px 58px rgba(0,0,0,.38)}.bowl:before{content:"";position:absolute;left:-14px;right:-14px;top:-24px;height:46px;border-radius:50%;background:linear-gradient(180deg,#f1f4e9,#99a08f);box-shadow:inset 0 -14px 20px rgba(0,0,0,.25)}.bowl:after{content:"";position:absolute;left:28px;right:28px;top:-10px;height:24px;border-radius:50%;background:radial-gradient(circle,rgba(84,240,180,.55),rgba(38,113,78,.42) 55%,rgba(0,0,0,.28));animation:powderGlow 2.2s ease-in-out infinite}.pestle{position:absolute;left:125px;top:20px;width:36px;height:178px;border-radius:24px;background:linear-gradient(90deg,#f2ead8,#8a806d);transform-origin:50% 88%;animation:grind 2.4s ease-in-out infinite;box-shadow:0 20px 36px rgba(0,0,0,.28)}.pestle:after{content:"";position:absolute;left:-6px;right:-6px;bottom:-8px;height:32px;border-radius:50%;background:#b7b1a1}.powder span,.spark span,.steam span{position:absolute;display:block;border-radius:50%;pointer-events:none}.powder span{left:50%;top:260px;width:5px;height:5px;background:var(--jade);box-shadow:0 0 12px var(--jade);animation:powder 2.8s ease-in-out infinite}.powder span:nth-child(1){animation-delay:.1s}.powder span:nth-child(2){animation-delay:.45s}.powder span:nth-child(3){animation-delay:.8s}.powder span:nth-child(4){animation-delay:1.15s}.powder span:nth-child(5){animation-delay:1.5s}.powder span:nth-child(6){animation-delay:1.85s}.powder span:nth-child(7){animation-delay:2.2s}
+.furnace{position:absolute;right:66px;top:162px;width:294px;height:300px}.cauldron{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);width:190px;height:132px;border-radius:42px 42px 70px 70px;background:linear-gradient(180deg,#243a32,#0b1411);border:1px solid rgba(255,255,255,.12);box-shadow:inset 0 16px 30px rgba(255,255,255,.06),inset 0 -18px 28px rgba(0,0,0,.58),0 32px 68px rgba(0,0,0,.42)}.cauldron:before{content:"";position:absolute;left:-16px;right:-16px;top:-17px;height:36px;border-radius:50%;background:linear-gradient(180deg,#42574f,#101c18);border:1px solid rgba(255,255,255,.16)}.cauldron:after{content:"";position:absolute;left:38px;right:38px;top:-2px;height:18px;border-radius:50%;background:radial-gradient(circle,rgba(248,217,129,.8),rgba(255,94,54,.44) 54%,rgba(0,0,0,.25));animation:brew 1.9s ease-in-out infinite}.flame{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:156px;height:126px;filter:drop-shadow(0 0 30px rgba(255,122,63,.72))}.flame i{position:absolute;bottom:0;left:50%;transform:translateX(-50%);border-radius:64% 36% 62% 38%;background:linear-gradient(180deg,#fff0a6,var(--amber) 44%,var(--ember));animation:flame 1.15s ease-in-out infinite}.flame i:nth-child(1){width:110px;height:124px}.flame i:nth-child(2){width:76px;height:94px;animation-delay:.22s;background:linear-gradient(180deg,#ffffd4,#ffc35b 48%,#ff6f37)}.flame i:nth-child(3){width:46px;height:62px;animation-delay:.38s;background:linear-gradient(180deg,#fff,#f8d981)}.steam span{left:50%;top:70px;width:10px;height:10px;background:rgba(248,217,129,.75);box-shadow:0 0 18px rgba(248,217,129,.8);animation:steam 3.2s ease-in-out infinite}.steam span:nth-child(2){animation-delay:.6s}.steam span:nth-child(3){animation-delay:1.2s}.steam span:nth-child(4){animation-delay:1.8s}.steam span:nth-child(5){animation-delay:2.4s}
+.pills{position:absolute;right:56px;bottom:42px;width:260px;border-radius:26px;border:1px solid rgba(248,217,129,.25);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.055));padding:16px;box-shadow:0 22px 54px rgba(0,0,0,.26)}.pills h3{font-size:15px;margin-bottom:12px;color:#fff6d5;letter-spacing:.04em}.pill-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.pill{height:28px;border-radius:999px;background:radial-gradient(circle at 30% 25%,#fff8d6,#d68a36 56%,#7a3a18);box-shadow:inset 0 -5px 10px rgba(0,0,0,.23),0 0 18px rgba(248,217,129,.32);animation:pillBorn 3.6s cubic-bezier(.2,1,.22,1) infinite;transform-origin:center}.pill:nth-child(2n){animation-delay:.18s}.pill:nth-child(3n){animation-delay:.36s}.pill:nth-child(4n){animation-delay:.54s}.pill:nth-child(5n){animation-delay:.72s}.pill:nth-child(6n){animation-delay:.9s}
+.steps{margin-top:18px;border-radius:34px;padding:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{position:relative;border:1px solid var(--line);background:rgba(255,255,255,.05);border-radius:24px;padding:18px;min-height:128px;overflow:hidden}.step:before{content:"";position:absolute;left:18px;top:18px;width:9px;height:9px;border-radius:50%;background:var(--jade);box-shadow:0 0 18px var(--jade)}.step:nth-child(2):before{background:var(--gold);box-shadow:0 0 18px var(--gold)}.step:nth-child(3):before{background:var(--ember);box-shadow:0 0 18px var(--ember)}.step:nth-child(4):before{background:#fff6d5;box-shadow:0 0 18px #fff6d5}.step b{display:block;margin-left:18px;font-size:18px}.step p{color:var(--muted);font-size:13px;line-height:1.65;margin-top:10px}
+.note-card{margin-top:18px;border-radius:28px;padding:18px 20px;color:#d4ebe1;font-size:13px;line-height:1.7}.note-card strong{color:#fff6d5}.footer{text-align:center;color:rgba(218,255,240,.55);font-size:12px;margin-top:18px}
+.restart .herb,.restart .pestle,.restart .powder span,.restart .flame i,.restart .steam span,.restart .pill,.restart .rune{animation:none!important}.restart.active .herb,.restart.active .pestle,.restart.active .powder span,.restart.active .flame i,.restart.active .steam span,.restart.active .pill,.restart.active .rune{animation:reboot .001s linear 1}
+@keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+@keyframes pulse{0%,100%{transform:translateX(0) scale(.7);opacity:.4}50%{transform:translateX(120px) scale(1.15);opacity:1}}
+@keyframes herbFly{0%,100%{transform:translate(0,0) rotate(0deg)}45%{transform:translate(138px,82px) rotate(28deg) scale(.86)}62%{transform:translate(154px,92px) rotate(-12deg) scale(.58);opacity:.6}72%{transform:translate(0,0) rotate(0deg);opacity:1}}
+@keyframes grind{0%,100%{transform:rotate(-20deg) translateY(0)}42%{transform:rotate(17deg) translateY(10px)}70%{transform:rotate(-8deg) translateY(3px)}}
+@keyframes powderGlow{0%,100%{filter:brightness(1);transform:scaleX(1)}50%{filter:brightness(1.45);transform:scaleX(1.08)}}
+@keyframes powder{0%{transform:translate(-8px,-34px) scale(.7);opacity:0}18%{opacity:1}100%{transform:translate(230px,-22px) scale(.2);opacity:0}}
+@keyframes brew{0%,100%{transform:scaleX(1);filter:brightness(1)}50%{transform:scaleX(1.16);filter:brightness(1.45)}}
+@keyframes flame{0%,100%{transform:translateX(-50%) scaleY(.9) rotate(-4deg)}50%{transform:translateX(-50%) scaleY(1.12) rotate(5deg)}}
+@keyframes steam{0%{transform:translate(-12px,84px) scale(.35);opacity:0}20%{opacity:1}100%{transform:translate(42px,-78px) scale(1.25);opacity:0}}
+@keyframes pillBorn{0%{transform:translateY(12px) scale(.35);opacity:0}18%,78%{transform:translateY(0) scale(1);opacity:1}100%{transform:translateY(-5px) scale(.95);opacity:.75}}
+@keyframes reboot{to{opacity:1}}
+@media(max-width:1040px){.hero{grid-template-columns:1fr}.stage-card{min-height:auto}.alchemy{height:560px}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.page{width:min(100% - 24px,1240px);padding-top:18px}.top{align-items:flex-start;flex-direction:column}.copy{padding:24px;border-radius:28px}.stat-grid,.steps{grid-template-columns:1fr}.stage-card{padding:14px;border-radius:28px}.alchemy{height:760px}.flow{display:none}.herbs{left:50%;top:74px;transform:translateX(-50%)}.mortar{left:50%;top:360px}.furnace{left:50%;right:auto;top:420px;transform:translateX(-50%)}.pills{left:50%;right:auto;bottom:22px;transform:translateX(-50%);width:min(280px,calc(100% - 30px))}.zone-label{display:none}.rune{width:310px;height:310px}.stage-title{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div class="brand">
+        <div class="logo">丸</div>
+        <div><b>草本淬丸工艺可视化</b><span>Herbal Alchemy Motion Page</span></div>
+      </div>
+      <div class="badge">单页 HTML · CSS/SVG 动效 · 无外部素材依赖</div>
+    </header>
+
+    <section class="hero">
+      <div class="copy">
+        <div class="kicker"><i></i> 中药研磨 × 视觉叙事 × 药丸成形</div>
+        <h1>草木入炉<span>研成一丸</span></h1>
+        <p class="lead">用一个更有记忆点的动态页面，把<strong>中草药筛选、石臼研磨、火候淬炼、丸剂凝聚</strong>串成一条完整视觉路径。适合放在中成药网页首页、汇报开场页，或作为产品导航的沉浸式视觉入口。</p>
+        <div class="chips">
+          <span class="chip">草药飞入</span><span class="chip">石臼研磨</span><span class="chip">粉末流转</span><span class="chip">丹火淬炼</span><span class="chip">药丸生成</span>
+        </div>
+        <div class="stat-grid">
+          <div class="stat"><b>4 步</b><span>用工艺逻辑替代平铺文字</span></div>
+          <div class="stat"><b>1 屏</b><span>承载完整视觉故事线</span></div>
+          <div class="stat"><b>0 图片</b><span>全部由 CSS/SVG 绘制</span></div>
+          <div class="stat"><b>可嵌入</b><span>网页、PPT、项目入口均可用</span></div>
+        </div>
+        <div class="action">
+          <button class="btn" id="replay">重新演绎工艺流程</button>
+          <a class="ghost" href="#steps">查看工艺拆解</a>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-title">
+          <h2>动态工艺台：从草药到丸剂</h2>
+          <span>Herb → Grind → Refine → Pill</span>
+        </div>
+        <div class="alchemy" id="alchemy">
+          <div class="rune"></div>
+          <div class="flow"></div>
+          <div class="zone-label z1">草木入局</div>
+          <div class="zone-label z2">石臼研磨</div>
+          <div class="zone-label z3">丹火淬炼</div>
+
+          <div class="herbs" aria-label="多种中草药">
+            <div class="herb h1"><em>黄芪</em></div>
+            <div class="herb h2"><em>枸杞</em></div>
+            <div class="herb h3"><em>当归</em></div>
+            <div class="herb h4"><em>人参</em></div>
+          </div>
+
+          <div class="mortar" aria-label="石臼研磨">
+            <div class="pestle"></div>
+            <div class="bowl"></div>
+          </div>
+          <div class="powder" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+          <div class="furnace" aria-label="淬炼炉">
+            <div class="steam"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="cauldron"></div>
+            <div class="flame"><i></i><i></i><i></i></div>
+          </div>
+
+          <div class="pills" aria-label="药丸生成">
+            <h3>凝聚成丸 · 批次生成</h3>
+            <div class="pill-grid">
+              <div class="pill"></div><div class="pill"></div><div class="pill"></div><div class="pill"></div><div class="pill"></div><div class="pill"></div>
+              <div class="pill"></div><div class="pill"></div><div class="pill"></div><div class="pill"></div><div class="pill"></div><div class="pill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps" id="steps">
+      <article class="step"><b>01 草药入场</b><p>以黄芪、当归、人参、枸杞等草本元素作为视觉符号，形成“多味药材汇聚”的第一印象。</p></article>
+      <article class="step"><b>02 研磨粉化</b><p>石臼与杵臼持续运动，表达传统炮制中的细化、融合、提纯过程，让页面更有动势。</p></article>
+      <article class="step"><b>03 火候淬炼</b><p>粉末流转进入丹炉，火焰、蒸汽和光晕强化“淬炼”和“转化”的仪式感。</p></article>
+      <article class="step"><b>04 凝聚成丸</b><p>药丸以批次方式生成，适合作为页面结尾、产品入口或后续跳转按钮的承接区。</p></article>
+    </section>
+
+    <section class="note-card">
+      <strong>使用建议：</strong>这页偏视觉开场，不直接表达具体疗效；如果要用于正式学术推广，可在下方继续接“产品证据、适应场景、专家共识、患教内容、循证路径”等模块，形成从视觉吸引到医学转化的完整页面。
+    </section>
+    <div class="footer">© Herbal Alchemy Motion Page · Designed for medical visual storytelling</div>
+  </main>
+
+<script>
+const replay = document.getElementById('replay');
+const alchemy = document.getElementById('alchemy');
+replay.addEventListener('click', () => {
+  alchemy.classList.add('restart');
+  void alchemy.offsetWidth;
+  alchemy.classList.remove('restart');
+});
+alchemy.addEventListener('pointermove', (event) => {
+  const rect = alchemy.getBoundingClientRect();
+  const x = (event.clientX - rect.left) / rect.width - .5;
+  const y = (event.clientY - rect.top) / rect.height - .5;
+  alchemy.style.setProperty('--mx', x.toFixed(3));
+  alchemy.style.setProperty('--my', y.toFixed(3));
+});
+</script>
+</body>
+</html>
