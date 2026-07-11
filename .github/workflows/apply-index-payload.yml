@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - '.index-payload.b64'
+      - '.index-payload.ready'
 
 permissions:
   contents: write
@@ -21,17 +21,17 @@ jobs:
       - name: Decode and verify index
         shell: bash
         run: |
-          base64 --decode .index-payload.b64 | gzip --decompress --stdout > index.html
+          cat .index-payload.part* | base64 --decode | gzip --decompress --stdout > index.html
           grep -q '国家基本药物目录（2026年版）' index.html
           grep -q 'YBS00442025' index.html
 
       - name: Commit readable index and remove temporary files
         shell: bash
         run: |
-          rm .index-payload.b64
+          rm .index-payload.part* .index-payload.ready
           rm .github/workflows/apply-index-payload.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html .index-payload.b64 .github/workflows/apply-index-payload.yml
+          git add -A
           git commit -m 'Update Siliankang page for 2026 basic medicines list'
           git push
