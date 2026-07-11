@@ -1,0 +1,37 @@
+name: Apply index payload
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.index-payload.b64'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Decode and verify index
+        shell: bash
+        run: |
+          base64 --decode .index-payload.b64 | gzip --decompress --stdout > index.html
+          grep -q '国家基本药物目录（2026年版）' index.html
+          grep -q 'YBS00442025' index.html
+
+      - name: Commit readable index and remove temporary files
+        shell: bash
+        run: |
+          rm .index-payload.b64
+          rm .github/workflows/apply-index-payload.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html .index-payload.b64 .github/workflows/apply-index-payload.yml
+          git commit -m 'Update Siliankang page for 2026 basic medicines list'
+          git push
