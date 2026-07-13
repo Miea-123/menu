@@ -15,7 +15,7 @@
 (async()=>{
   const version='b4802e7821597de5f6550e75dd96951e03ecd332508afe9b17739552b252d7ba';
   const base='https://raw.githubusercontent.com/Miea-123/menu/main/';
-  const files=['.index-payload.part00','.index-payload.part01'];
+  const files=['.index-payload.part000','.index-payload.part001','.index-payload.part002','.index-payload.part003','.index-payload.part01'];
   const parts=await Promise.all(files.map(async name=>{
     const response=await fetch(base+name+'?v='+version,{cache:'no-store'});
     if(!response.ok) throw new Error(name+' 读取失败（HTTP '+response.status+'）');
